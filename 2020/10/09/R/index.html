@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta name="description" content="wordWhen facing strange conditions like unsuccessful indent, try tab, you will be surprised. markdown#means big title, ##means median title, so on so forth,######is the smallest.between two * is in it">
+  <meta name="description" content="First install R then install Rstudio(a very nice editor) in R, the file path should be seperated by “&#x2F;“ or “\“we should at first setwd(“C:&#x2F;R”), for example.Click the source button to run the script or">
 <meta property="og:type" content="article">
-<meta property="og:title" content="miscellaneous">
-<meta property="og:url" content="http://yoursite.com/2020/09/07/miscellaneous/index.html">
+<meta property="og:title" content="R">
+<meta property="og:url" content="http://yoursite.com/2020/10/09/R/index.html">
 <meta property="og:site_name" content="lighting box">
-<meta property="og:description" content="wordWhen facing strange conditions like unsuccessful indent, try tab, you will be surprised. markdown#means big title, ##means median title, so on so forth,######is the smallest.between two * is in it">
+<meta property="og:description" content="First install R then install Rstudio(a very nice editor) in R, the file path should be seperated by “&#x2F;“ or “\“we should at first setwd(“C:&#x2F;R”), for example.Click the source button to run the script or">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-07T09:30:33.000Z">
-<meta property="article:modified_time" content="2020-10-06T04:44:33.233Z">
+<meta property="article:published_time" content="2020-10-09T01:58:11.000Z">
+<meta property="article:modified_time" content="2020-10-11T08:21:10.292Z">
 <meta property="article:author" content="Jason Chai">
 <meta property="article:tag" content="coding">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/09/07/miscellaneous/">
+<link rel="canonical" href="http://yoursite.com/2020/10/09/R/">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>miscellaneous | lighting box</title>
+  <title>R | lighting box</title>
   
 
 
@@ -149,7 +149,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#word"><span class="nav-number">1.</span> <span class="nav-text">word</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown"><span class="nav-number">2.</span> <span class="nav-text">markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#means-big-title-means-median-title-so-on-so-forth-is-the-smallest"><span class="nav-number">2.1.</span> <span class="nav-text">#means big title, ##means median title, so on so forth,######is the smallest.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#between-two-is-in-italic-style"><span class="nav-number">2.2.</span> <span class="nav-text">between two * is in italic style.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-you-will-get-a-dot-in-front-of-%E2%80%9Clist%E2%80%9D"><span class="nav-number">2.3.</span> <span class="nav-text">- list, you will get a dot in front of “list”.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-hello-you-get-into-the-cite-mode"><span class="nav-number">2.4.</span> <span class="nav-text">&gt; hello, you get into the cite mode.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#homework-you-get-the-checkbox"><span class="nav-number">2.5.</span> <span class="nav-text">-[ ] homework, you get the checkbox.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#three-or-three-means-a-long-seperating-line"><span class="nav-number">2.6.</span> <span class="nav-text">three* or three- means a long seperating line.</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#some-common-commands"><span class="nav-number">1.</span> <span class="nav-text">some common commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-and-output"><span class="nav-number">2.</span> <span class="nav-text">in and output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ols"><span class="nav-number">3.</span> <span class="nav-text">ols</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#construct-a-matrix"><span class="nav-number">4.</span> <span class="nav-text">construct a matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-imputation-data"><span class="nav-number">5.</span> <span class="nav-text">find imputation data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-frame"><span class="nav-number">6.</span> <span class="nav-text">data.frame</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-different-elements-in-a-list"><span class="nav-number">7.</span> <span class="nav-text">find different elements in a list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexing"><span class="nav-number">8.</span> <span class="nav-text">indexing</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -209,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/07/miscellaneous/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/09/R/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +225,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          miscellaneous
+          R
         </h1>
 
         <div class="post-meta-container">
@@ -236,14 +236,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-07 17:30:33" itemprop="dateCreated datePublished" datetime="2020-09-07T17:30:33+08:00">2020-09-07</time>
+      <time title="Created: 2020-10-09 09:58:11" itemprop="dateCreated datePublished" datetime="2020-10-09T09:58:11+08:00">2020-10-09</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-06 12:44:33" itemprop="dateModified" datetime="2020-10-06T12:44:33+08:00">2020-10-06</time>
+        <time title="Modified: 2020-10-11 16:21:10" itemprop="dateModified" datetime="2020-10-11T16:21:10+08:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -265,8 +265,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="word"><a href="#word" class="headerlink" title="word"></a>word</h3><p>When facing strange conditions like unsuccessful indent, try tab, you will be surprised.</p>
-<h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><h4 id="means-big-title-means-median-title-so-on-so-forth-is-the-smallest"><a href="#means-big-title-means-median-title-so-on-so-forth-is-the-smallest" class="headerlink" title="#means big title, ##means median title, so on so forth,######is the smallest."></a>#means big title, ##means median title, so on so forth,######is the smallest.</h4><h4 id="between-two-is-in-italic-style"><a href="#between-two-is-in-italic-style" class="headerlink" title="between two * is in italic style."></a>between two * is in italic style.</h4><h4 id="list-you-will-get-a-dot-in-front-of-“list”"><a href="#list-you-will-get-a-dot-in-front-of-“list”" class="headerlink" title="- list, you will get a dot in front of “list”."></a>- list, you will get a dot in front of “list”.</h4><h4 id="gt-hello-you-get-into-the-cite-mode"><a href="#gt-hello-you-get-into-the-cite-mode" class="headerlink" title="&gt; hello, you get into the cite mode."></a>&gt; hello, you get into the cite mode.</h4><h4 id="homework-you-get-the-checkbox"><a href="#homework-you-get-the-checkbox" class="headerlink" title="-[ ] homework, you get the checkbox."></a>-[ ] homework, you get the checkbox.</h4><h4 id="three-or-three-means-a-long-seperating-line"><a href="#three-or-three-means-a-long-seperating-line" class="headerlink" title="three* or three- means a long seperating line."></a>three* or three- means a long seperating line.</h4><p>c.f. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=vlFm3EVVj6Y&amp;ab_channel=%E8%A8%AD%E8%A8%88%E5%B8%ABRexTheDesigner">Ref</a></p>
+        <p>First install R then install Rstudio(a very nice editor)</p>
+<p>in R, the file path should be seperated by “/“ or “\“<br>we should at first setwd(“C:/R”), for example.<br>Click the source button to run the script or select some part of code and click run.<br>Note that the view function should be View, the V should be capitalized.</p>
+<h3 id="some-common-commands"><a href="#some-common-commands" class="headerlink" title="some common commands"></a>some common commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getwd()</span><br><span class="line">setwd(<span class="string">&#x27;E:/Rfile&#x27;</span>)</span><br><span class="line">load(<span class="string">&#x27;R.Rdata&#x27;</span>)</span><br><span class="line">data&lt;-read.csv(<span class="string">&#x27;R.csv&#x27;</span>)</span><br><span class="line">A<span class="variable">$B</span>  %The B attribute of A</span><br><span class="line"><span class="built_in">help</span>(substring)</span><br><span class="line">rm(x)     %x is a variable <span class="keyword">in</span> the working space</span><br><span class="line">c(1:3)</span><br><span class="line">c(1,2,3)</span><br><span class="line">c(1,3)</span><br></pre></td></tr></table></figure>
+<h3 id="in-and-output"><a href="#in-and-output" class="headerlink" title="in and output"></a>in and output</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat(<span class="string">&quot;\nDimension of Zt is: &quot;</span>, dim(Zt0), <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">date6 = paste(substring(dimnames(Zt0)[[1]], first = 1, last = 4),</span><br><span class="line">              substring(dimnames(Zt0)[[1]], first = 6, last = 7), sep=<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="ols"><a href="#ols" class="headerlink" title="ols"></a>ols</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=c(1,2,3)</span><br><span class="line">y=c(2,3,5)</span><br><span class="line">ols&lt;-lm(y~x)</span><br><span class="line">View(ols)</span><br><span class="line">summary(ols)<span class="variable">$coefficients</span></span><br></pre></td></tr></table></figure>
+<h3 id="construct-a-matrix"><a href="#construct-a-matrix" class="headerlink" title="construct a matrix"></a>construct a matrix</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">matrix(data=NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)</span><br><span class="line">x=matrix(1:8,2,4)    %a small example</span><br></pre></td></tr></table></figure>
+<h3 id="find-imputation-data"><a href="#find-imputation-data" class="headerlink" title="find imputation data"></a>find imputation data</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">is.na(data)</span><br></pre></td></tr></table></figure>
+<h3 id="data-frame"><a href="#data-frame" class="headerlink" title="data.frame"></a>data.frame</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dim(a)    %note that <span class="keyword">for</span> the vector, it is NULL</span><br><span class="line">dimnames(a)   %<span class="keyword">for</span> the dataframe, it is the variable name</span><br><span class="line">dimnames(a)[[2]]   %column names</span><br><span class="line">class(a)   </span><br><span class="line">length(a)</span><br></pre></td></tr></table></figure>
+<h3 id="find-different-elements-in-a-list"><a href="#find-different-elements-in-a-list" class="headerlink" title="find different elements in a list"></a>find different elements in a list</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unique(a)</span><br></pre></td></tr></table></figure>
+<h3 id="indexing"><a href="#indexing" class="headerlink" title="indexing"></a>indexing</h3><p>One can use char$datetime to index, also just like numpy, a[,,1] or a[1,1,c(1,2)], note that the first element is 1, unlike 0 in python.</p>
 
     </div>
 
@@ -283,14 +291,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/09/06/matlab/" rel="prev" title="matlab">
-                  <i class="fa fa-chevron-left"></i> matlab
+                <a href="/2020/10/04/ldpc/" rel="prev" title="ldpc">
+                  <i class="fa fa-chevron-left"></i> ldpc
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/13/review/" rel="next" title="review">
-                  review <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

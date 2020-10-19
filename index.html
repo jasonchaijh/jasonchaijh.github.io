@@ -158,13 +158,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -204,6 +204,256 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/09/R/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jason Chai">
+      <meta itemprop="description" content="To be true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lighting box">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/09/R/" class="post-title-link" itemprop="url">R</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-09 09:58:11" itemprop="dateCreated datePublished" datetime="2020-10-09T09:58:11+08:00">2020-10-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-11 16:21:10" itemprop="dateModified" datetime="2020-10-11T16:21:10+08:00">2020-10-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-skills/" itemprop="url" rel="index"><span itemprop="name">computer skills</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>First install R then install Rstudio(a very nice editor)</p>
+<p>in R, the file path should be seperated by “/“ or “\“<br>we should at first setwd(“C:/R”), for example.<br>Click the source button to run the script or select some part of code and click run.<br>Note that the view function should be View, the V should be capitalized.</p>
+<h3 id="some-common-commands"><a href="#some-common-commands" class="headerlink" title="some common commands"></a>some common commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getwd()</span><br><span class="line">setwd(<span class="string">&#x27;E:/Rfile&#x27;</span>)</span><br><span class="line">load(<span class="string">&#x27;R.Rdata&#x27;</span>)</span><br><span class="line">data&lt;-read.csv(<span class="string">&#x27;R.csv&#x27;</span>)</span><br><span class="line">A<span class="variable">$B</span>  %The B attribute of A</span><br><span class="line"><span class="built_in">help</span>(substring)</span><br><span class="line">rm(x)     %x is a variable <span class="keyword">in</span> the working space</span><br><span class="line">c(1:3)</span><br><span class="line">c(1,2,3)</span><br><span class="line">c(1,3)</span><br></pre></td></tr></table></figure>
+<h3 id="in-and-output"><a href="#in-and-output" class="headerlink" title="in and output"></a>in and output</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat(<span class="string">&quot;\nDimension of Zt is: &quot;</span>, dim(Zt0), <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">date6 = paste(substring(dimnames(Zt0)[[1]], first = 1, last = 4),</span><br><span class="line">              substring(dimnames(Zt0)[[1]], first = 6, last = 7), sep=<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="ols"><a href="#ols" class="headerlink" title="ols"></a>ols</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=c(1,2,3)</span><br><span class="line">y=c(2,3,5)</span><br><span class="line">ols&lt;-lm(y~x)</span><br><span class="line">View(ols)</span><br><span class="line">summary(ols)<span class="variable">$coefficients</span></span><br></pre></td></tr></table></figure>
+<h3 id="construct-a-matrix"><a href="#construct-a-matrix" class="headerlink" title="construct a matrix"></a>construct a matrix</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">matrix(data=NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)</span><br><span class="line">x=matrix(1:8,2,4)    %a small example</span><br></pre></td></tr></table></figure>
+<h3 id="find-imputation-data"><a href="#find-imputation-data" class="headerlink" title="find imputation data"></a>find imputation data</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">is.na(data)</span><br></pre></td></tr></table></figure>
+<h3 id="data-frame"><a href="#data-frame" class="headerlink" title="data.frame"></a>data.frame</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dim(a)    %note that <span class="keyword">for</span> the vector, it is NULL</span><br><span class="line">dimnames(a)   %<span class="keyword">for</span> the dataframe, it is the variable name</span><br><span class="line">dimnames(a)[[2]]   %column names</span><br><span class="line">class(a)   </span><br><span class="line">length(a)</span><br></pre></td></tr></table></figure>
+<h3 id="find-different-elements-in-a-list"><a href="#find-different-elements-in-a-list" class="headerlink" title="find different elements in a list"></a>find different elements in a list</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unique(a)</span><br></pre></td></tr></table></figure>
+<h3 id="indexing"><a href="#indexing" class="headerlink" title="indexing"></a>indexing</h3><p>One can use char$datetime to index, also just like numpy, a[,,1] or a[1,1,c(1,2)], note that the first element is 1, unlike 0 in python.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/04/ldpc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jason Chai">
+      <meta itemprop="description" content="To be true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lighting box">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/04/ldpc/" class="post-title-link" itemprop="url">ldpc</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-04 12:42:44" itemprop="dateCreated datePublished" datetime="2020-10-04T12:42:44+08:00">2020-10-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-06 12:59:15" itemprop="dateModified" datetime="2020-10-06T12:59:15+08:00">2020-10-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/research/" itemprop="url" rel="index"><span itemprop="name">research</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="5G-LDPC-Research"><a href="#5G-LDPC-Research" class="headerlink" title="5G LDPC Research"></a>5G LDPC Research</h3><blockquote>
+<p>flag: read three papers every day and dig out the 5G LDPC structure </p>
+</blockquote>
+<ul>
+<li>10.4  the Belief Propogation should include a bound before tanh(lr/2), say lr=max(min(lr,20),-20)</li>
+<li>10.5  proficient in the cluster, but no need at all, we can set the Z small say 3.<pre><code>  see layered BP, and a step [link](https://www.linkedin.com/pulse/5g-nr-dl-sch-ldpc-channel-coding-base-graph-selection-chelikani?trk=related_artice_5G-NR%20DL-SCH%20LDPC%20Channel%20Coding%20Base%20Graph%20selection%20and%20Coding%20Procedure_article-card_title)
+  and a good [overview](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CF52C26874AF5E00883E00B6E1F907C7/S2048770319000106a.pdf/an_overview_of_channel_coding_for_5g_nr_cellular_communications.pdf)
+</code></pre></li>
+<li>10.6  read the code of 5G again.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/03/cluster/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jason Chai">
+      <meta itemprop="description" content="To be true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lighting box">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/03/cluster/" class="post-title-link" itemprop="url">cluster</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2020-10-03 22:29:44 / Modified: 22:40:23" itemprop="dateCreated datePublished" datetime="2020-10-03T22:29:44+08:00">2020-10-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-skills/" itemprop="url" rel="index"><span itemprop="name">computer skills</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>These days I have been in the mire of cluster. So trifling it is!<br>I collect some command to recap in the future:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sbatch run.slurm</span><br><span class="line">sjob</span><br><span class="line">squeue</span><br><span class="line">snode</span><br><span class="line">scancel &lt;jobib&gt;</span><br><span class="line">salloc -t 2-00:00:00 -p cpu    %interactive processing mode</span><br><span class="line">module add matlab</span><br><span class="line"><span class="built_in">cd</span> ...</span><br><span class="line">cp ./ ./  %to copy a file from the first path to the second path, <span class="keyword">if</span> folder use -r</span><br><span class="line">ls</span><br><span class="line">module list</span><br></pre></td></tr></table></figure></p>
+<p>use vim to compile like every file, it really saves time to put on or off files</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -231,10 +481,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2020-09-27 14:47:23 / Modified: 14:55:22" itemprop="dateCreated datePublished" datetime="2020-09-27T14:47:23+08:00">2020-09-27</time>
+      <time title="Created: 2020-09-27 14:47:23" itemprop="dateCreated datePublished" datetime="2020-09-27T14:47:23+08:00">2020-09-27</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-18 14:45:22" itemprop="dateModified" datetime="2020-10-18T14:45:22+08:00">2020-10-18</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -255,9 +511,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="general"><a href="#general" class="headerlink" title="general"></a>general</h3><p>axis=0按行计算(把整行当作一个元素)<br>axis=1按列计算</p>
-<h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><p>conda command see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/cqliu/p/11199771.html">Ref</a></p>
-<h3 id="tensorflow"><a href="#tensorflow" class="headerlink" title="tensorflow"></a>tensorflow</h3><h3 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">np.r_()  <span class="comment">#矩阵上下拼接</span></span><br><span class="line">np.c_()  <span class="comment">#矩阵左右拼接</span></span><br></pre></td></tr></table></figure>
+          <h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>axis=0按行计算(把整行当作一个元素)<br>axis=1按列计算<br>python is case-sensitive<br>python可以不断地叠点，比如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">M = np.loadtxt(<span class="string">&quot;mktrf.txt&quot;</span>).reshape([-1,1])</span><br><span class="line">indiz=indiz.reshape([516,3000,2]).transpose([0,2,1]).reshape([516,6000])</span><br></pre></td></tr></table></figure></p>
+<h3 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h3><p>关于使用技巧的深度好文:<a target="_blank" rel="noopener" href="https://blog.csdn.net/create115721/article/details/79243641">REF</a><br>conda command see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/cqliu/p/11199771.html">Ref</a><br>ctrl+enter:run the code block<br>B:insert a code block beneath<br>A:insert a code block up<br>D+D:delete the selected code block</p>
+<h3 id="Tensorflow"><a href="#Tensorflow" class="headerlink" title="Tensorflow"></a>Tensorflow</h3><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">np.r_()  <span class="comment">#矩阵上下拼接</span></span><br><span class="line">np.c_()  <span class="comment">#矩阵左右拼接</span></span><br><span class="line">a.size   <span class="comment">#elements number, row dim * col dim</span></span><br><span class="line">a.T      <span class="comment">#transpose</span></span><br><span class="line">a.shape  <span class="comment">#list of row dim and col dim</span></span><br><span class="line">R21=np.array(range(1,10)).reshape([3,3])</span><br></pre></td></tr></table></figure>
+<p>About the reshape, see <a target="_blank" rel="noopener" href="https://blog.csdn.net/zhanggonglalala/article/details/79356653">REF</a></p>
+<h3 id="统计计算discover"><a href="#统计计算discover" class="headerlink" title="统计计算discover"></a>统计计算discover</h3><h2 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h2><ul>
+<li>About the norm, see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/devilmaycry812839668/p/9352814.html">REF</a></li>
+<li>About the linalg, see <a target="_blank" rel="noopener" href="https://www.runoob.com/numpy/numpy-linear-algebra.html">REF</a></li>
+<li>About the contour, see <a target="_blank" rel="noopener" href="https://blog.csdn.net/ywsydwsbn/article/details/106592904?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduend~default-1-106592904.nonecase&amp;utm_term=python%E5%AE%9E%E7%8E%B0%E7%AD%89%E9%AB%98%E7%BA%BF%E5%9B%BE&amp;spm=1000.2123.3001.4430">PYTHON</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/g_b_l/article/details/52881984">MATLAB</a></li>
+<li>About the scatter, see <a target="_blank" rel="noopener" href="https://blog.csdn.net/w576233728/article/details/86538060">CSDN</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6a71afa789a2">简书</a></li>
+<li>怎么计算一个array的元素，最简单就是索引[0],或者astype,或者tolist</li>
+<li>关于画图，savefig一定要设置dpi=300，之前写保存的图片名称,e.g.Q1.png,然后savefig一定要在plt.show()之前,否则会生成空白图片，matlab也可以类似做</li>
+<li>在jupyter内置显示图片，先通过cell把该cell设置成markdown格式，再<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![title](Q1.png)</span><br></pre></td></tr></table></figure>
+运行该代码即可，若要改变大小<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;thunderbird.jpg&quot;</span> width=<span class="string">&quot;50%&quot;</span> height=<span class="string">&quot;50%&quot;</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li>np.array([0])也是True,即<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> np.array([0]):</span><br><span class="line">    <span class="built_in">print</span>(1)</span><br></pre></td></tr></table></figure>
+是不会输出1的.</li>
+<li>试验表明，做了线搜索的GD跟NAG差不多，为了体现差异我调小了步长.</li>
+<li></li>
+</ul>
+<h3 id="Dataframe-basics-so-annoying"><a href="#Dataframe-basics-so-annoying" class="headerlink" title="Dataframe basics (so annoying)"></a>Dataframe basics (so annoying)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(char)</span><br><span class="line">char[<span class="string">&#x27;datadate&#x27;</span>]   %one index plus datadate column</span><br><span class="line">char[1:2]    %the first row of the char</span><br><span class="line">char.columns   %column index</span><br><span class="line"><span class="comment">#############</span></span><br><span class="line">char1=char.set_index(<span class="string">&#x27;jdate&#x27;</span>)</span><br><span class="line">char2=char1[[<span class="string">&#x27;ret&#x27;</span>,<span class="string">&#x27;rank_me&#x27;</span>,<span class="string">&#x27;rank_bm&#x27;</span>]]    %when want to index more than one columns, one should add two [[]]</span><br><span class="line">char2.sort_values(by=[<span class="string">&#x27;jdate&#x27;</span>,<span class="string">&#x27;rank_me&#x27;</span>],ascending=[True,False])    </span><br><span class="line">%it seems that sort_index <span class="keyword">function</span> doesn<span class="string">&#x27;t have a keyword argument called &quot;by&quot;</span></span><br><span class="line"><span class="string">char3.index.unique()[48:564]     #unique is to find different values</span></span><br></pre></td></tr></table></figure>
+<h3 id="pivot-table-usage"><a href="#pivot-table-usage" class="headerlink" title="pivot_table usage"></a>pivot_table usage</h3><p>see <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40161254/article/details/83620222">REF</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">df=pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">&quot;value&quot;</span>:np.random.randn(36)&#125;,</span><br><span class="line">    index=pd.date_range(<span class="string">&#x27;2011-01-01&#x27;</span>,freq=<span class="string">&#x27;M&#x27;</span>,periods=36))     <span class="comment">#so cool</span></span><br><span class="line"><span class="built_in">print</span>(df)</span><br><span class="line"></span><br><span class="line">dff=pd.pivot_table(df,index=df.index.month,columns=df.index.year,</span><br><span class="line">                   values=<span class="string">&#x27;value&#x27;</span>,</span><br><span class="line">                   <span class="comment"># aggfunc=&#x27;mean&#x27;)</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="groupby"><a href="#groupby" class="headerlink" title="groupby"></a>groupby</h3><p>see <a target="_blank" rel="noopener" href="https://blog.csdn.net/wxf2012301351/article/details/82907821">REF</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from pandas import Series,DataFrame </span><br><span class="line">a=[[<span class="string">&#x27;Li&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;PE&#x27;</span>,98.],[<span class="string">&#x27;Li&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;MATH&#x27;</span>,60.],[<span class="string">&#x27;liu&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;MATH&#x27;</span>,60.],[<span class="string">&#x27;yu&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="string">&#x27;PE&#x27;</span>,100.]]</span><br><span class="line"></span><br><span class="line">af=DataFrame(a,columns=[<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;sex&#x27;</span>,<span class="string">&#x27;course&#x27;</span>,<span class="string">&#x27;score&#x27;</span>]) </span><br><span class="line">af.groupby([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;course&#x27;</span>])[<span class="string">&#x27;score&#x27;</span>].sum() <span class="comment">#先将af按照namej进行分组，再按照score进行分组，最后将score进行叠加</span></span><br><span class="line">af.groupby([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;course&#x27;</span>])[<span class="string">&#x27;score&#x27;</span>].sum()[<span class="string">&#x27;Li&#x27;</span>]    <span class="comment">#直接对name的值进行索引</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="loc-amp-iloc"><a href="#loc-amp-iloc" class="headerlink" title="loc&amp;iloc"></a>loc&amp;iloc</h3><p>see <a target="_blank" rel="noopener" href="https://blog.csdn.net/missyougoon/article/details/83375375">REF</a></p>
+<ul>
+<li>iloc,即index locate,用index索引进行定位,所以参数是整型,如:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[10:20,3:5]</span><br></pre></td></tr></table></figure></li>
+<li><p>loc,则可以使用column名和index名进行定位,如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.loc[<span class="string">&#x27;image1&#x27;</span>:<span class="string">&#x27;image10&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;score&#x27;</span>]    </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>note the [ ] rather than ( )</p>
+</li>
+<li>also note that df.loc contains the beginning and the end while df.iloc doesn’t contain the end.</li>
+</ul>
+<h3 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h3><p>see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/nxf-rabbit75/p/11111825.html">REF</a><br>or <a target="_blank" rel="noopener" href="https://blog.csdn.net/luenci379/article/details/85268107">REF2</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43178297/article/details/95543176">Exchange from datetime to string</a></p>
+<h3 id="concatenate"><a href="#concatenate" class="headerlink" title="concatenate"></a>concatenate</h3><p>see <a target="_blank" rel="noopener" href="https://blog.csdn.net/leilei7407/article/details/104478530">REF</a><br>or <a target="_blank" rel="noopener" href="https://blog.csdn.net/youyoujbd/article/details/88930961">REF2</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.concat([char3[0:2],(char3[2:4])])</span><br><span class="line">pd.concat([pd.DataFrame(),(char3[2:4])])     %这告诉我们还可以拼接空数据框</span><br></pre></td></tr></table></figure></p>
+<h2 id="file-operation"><a href="#file-operation" class="headerlink" title="file operation"></a>file operation</h2><h3 id="pandas-load-and-save-csv"><a href="#pandas-load-and-save-csv" class="headerlink" title="pandas load and save csv"></a>pandas load and save csv</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=read_csv(<span class="string">&#x27;a.csv&#x27;</span>)</span><br><span class="line">a=pd.to_csv(<span class="string">&#x27;a.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/datablog/p/6127000.html">REF</a></p>
+<h3 id="pandas-load-and-save-pickle"><a href="#pandas-load-and-save-pickle" class="headerlink" title="pandas load and save pickle"></a>pandas load and save pickle</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dff.to_pickle(<span class="string">&#x27;dff.pickle&#x27;</span>)</span><br><span class="line">df=pd.read_pickle(<span class="string">&#x27;dff.pickle&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-load-and-save-txt"><a href="#numpy-load-and-save-txt" class="headerlink" title="numpy load and save txt"></a>numpy load and save txt</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.savetxt(<span class="string">&#x27;a.txt&#x27;</span>,a)</span><br><span class="line">a=np.loadtxt(<span class="string">&#x27;a.txt&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="R-API"><a href="#R-API" class="headerlink" title="R API"></a>R API</h3><p>see <a target="_blank" rel="noopener" href="https://www.cnblogs.com/shilo930/p/13161684.html">REF</a></p>
+<h3 id="small-text-自己领会"><a href="#small-text-自己领会" class="headerlink" title="small text (自己领会)"></a>small text (自己领会)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d=np.array([[1,2],[3,4],[5,6]])</span><br><span class="line">d[[2,0],0]</span><br><span class="line"><span class="comment">#out:array([5, 1])</span></span><br></pre></td></tr></table></figure>
+<h3 id="sklearn"><a href="#sklearn" class="headerlink" title="sklearn"></a>sklearn</h3><h5 id="OLS"><a href="#OLS" class="headerlink" title="OLS"></a>OLS</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x=np.array([[1,2],[1,2],[1,3]])</span><br><span class="line">y=np.array([[1,1],[3,3],[5,5]])</span><br><span class="line">model=LinearRegression(fit_intercept=False)     <span class="comment">#in this case, model.intercept_=0</span></span><br><span class="line">result=model.fit(x,y)</span><br><span class="line">coeff=result.coef_</span><br><span class="line">coeff</span><br><span class="line">np.dot(x,coeff.T)</span><br><span class="line">result.score(x,y)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -489,7 +782,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-14 08:52:17" itemprop="dateModified" datetime="2020-09-14T08:52:17+08:00">2020-09-14</time>
+        <time title="Modified: 2020-10-06 12:44:33" itemprop="dateModified" datetime="2020-10-06T12:44:33+08:00">2020-10-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -569,7 +862,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-27 23:04:56" itemprop="dateModified" datetime="2020-09-27T23:04:56+08:00">2020-09-27</time>
+        <time title="Modified: 2020-10-06 12:46:40" itemprop="dateModified" datetime="2020-10-06T12:46:40+08:00">2020-10-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -603,6 +896,8 @@
 <h3 id="use-command-line-miscellaneous"><a href="#use-command-line-miscellaneous" class="headerlink" title="use command line(miscellaneous)"></a>use command line(miscellaneous)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">delete <span class="string">&quot;1.mat&quot;</span></span><br><span class="line">delete 1.mat</span><br><span class="line">delete 1.m</span><br><span class="line">edit 1.m</span><br><span class="line">1.m</span><br><span class="line">save 1    %generate a 1.mat containing variables <span class="keyword">in</span> the workspace</span><br><span class="line">save(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">save 1 ans ans2  %designate the variables to save</span><br><span class="line">save(strcat(<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>),<span class="string">&#x27;ans&#x27;</span>)</span><br><span class="line">load 1</span><br><span class="line">load(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">delete(<span class="string">&#x27;2&#x27;</span>)  %illegal <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
 <h3 id="generate-random-numbers"><a href="#generate-random-numbers" class="headerlink" title="generate random numbers"></a>generate random numbers</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rand(<span class="string">&#x27;seed&#x27;</span>,100*clock)   % <span class="built_in">set</span> the seed</span><br><span class="line">rand</span><br><span class="line">rand(5)</span><br><span class="line">rand(4,5)</span><br><span class="line">randi([2,8],2,2)      % generate a 2 by 2 matrix <span class="keyword">in</span> the range of 2 to 8</span><br></pre></td></tr></table></figure>
 <h3 id="disp-and-fprintf"><a href="#disp-and-fprintf" class="headerlink" title="disp and fprintf"></a>disp and fprintf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fprintf(<span class="string">&#x27;%2d&#x27;</span>,12);  % 不换行</span><br><span class="line">disp();       %换行</span><br><span class="line">% d <span class="built_in">integer</span>, f <span class="built_in">float</span>, e scientific counting, s string, <span class="string">&#x27;\n&#x27;</span> 换行</span><br></pre></td></tr></table></figure>
+<h3 id="small-experiment"><a href="#small-experiment" class="headerlink" title="small experiment"></a>small experiment</h3><p>I put a file named s, writing<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1=1;</span><br><span class="line">f(s1);</span><br><span class="line">s1</span><br></pre></td></tr></table></figure><br>and a file function named f, writing<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> s=f(s)</span><br><span class="line">s=s+1</span><br><span class="line">end</span><br></pre></td></tr></table></figure><br> guess the output of s.m<br> it’s 1, so the function doesn’t change the value of s1!</p>
+
       
     </div>
 
@@ -784,255 +1079,6 @@
 <p>《这个杀手不太冷》</p>
 <p>《死亡诗社》</p>
 <p>《放牛班的春天》</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/books/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Chai">
-      <meta itemprop="description" content="To be true">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lighting box">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/26/books/" class="post-title-link" itemprop="url">books</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2020-08-26 23:03:09 / Modified: 23:11:58" itemprop="dateCreated datePublished" datetime="2020-08-26T23:03:09+08:00">2020-08-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/collection/" itemprop="url" rel="index"><span itemprop="name">collection</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>《三体》</p>
-<p>《非暴力沟通》</p>
-<p>《关键对话》</p>
-<p>《沟通圣经》</p>
-<p>《麦肯锡问题分析与解决技巧》</p>
-<p>《社会性动物》</p>
-<p>《断舍离》</p>
-<p>《博弈与社会》</p>
-<p>《策略思维》</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/blog-construction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Chai">
-      <meta itemprop="description" content="To be true">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lighting box">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/26/blog-construction/" class="post-title-link" itemprop="url">blog init</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-08-26 16:42:15" itemprop="dateCreated datePublished" datetime="2020-08-26T16:42:15+08:00">2020-08-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-14 08:45:43" itemprop="dateModified" datetime="2020-09-14T08:45:43+08:00">2020-09-14</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>This is my first blog.<br>I learn to make a blog using github on my own.<br>I use the theme next with the last subtheme called Gemini.<br>I set math option in theme config file as true (false for default on demand) and option for mathjax and katex as true, though I have not used them yet.<br>I set the showed icon to be home, about, archives and tags. I wonder how to establish these sites.<br>I download a tool for picture-showing.  <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40688217/article/details/90110975">Ref1</a>.<br>To scale the picture, use the sentence as follows:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;thunderbird.jpg&quot;</span> width=<span class="string">&quot;50%&quot;</span> height=<span class="string">&quot;50%&quot;</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>I discover that latex could be used on the markdown, quoting by “$$” on both sides.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image –save</span><br></pre></td></tr></table></figure>
-<p>But the npm indicates that two high vulnerability occurs due to a package called “lodash”. </p>
-<hr>
-<p>I major in applied mathematics, I will use this blog to update my research and my coding tips.</p>
-<p><img src="/2020/08/26/blog-construction/thunderbird.jpg" alt></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/latex-tricks/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Chai">
-      <meta itemprop="description" content="To be true">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lighting box">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/26/latex-tricks/" class="post-title-link" itemprop="url">Latex Tricks</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-08-26 14:34:09" itemprop="dateCreated datePublished" datetime="2020-08-26T14:34:09+08:00">2020-08-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-16 09:48:54" itemprop="dateModified" datetime="2020-09-16T09:48:54+08:00">2020-09-16</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/computer-skills/" itemprop="url" rel="index"><span itemprop="name">computer skills</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="LATEX-Tricks-updating"><a href="#LATEX-Tricks-updating" class="headerlink" title="LATEX Tricks(updating)"></a>LATEX Tricks(updating)</h2><h3 id="Tag-with-every-row"><a href="#Tag-with-every-row" class="headerlink" title="Tag with every row"></a>Tag with every row</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align*&#125;</span><br><span class="line">&amp;x=1 \tag&#123;equation&#125;\\</span><br><span class="line">&amp;x&gt;1</span><br><span class="line">\end&#123;align*&#125;</span><br></pre></td></tr></table></figure>
-<p>after compiling…</p>
-<script type="math/tex; mode=display">
-\begin{align}
-&x=1 \tag{equation}\\
-&x>1
-\end{align}</script><h3 id="Use-comments"><a href="#Use-comments" class="headerlink" title="Use comments"></a>Use comments</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;comment&#125;</span><br><span class="line">\end&#123;comment&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Bibliography"><a href="#Bibliography" class="headerlink" title="Bibliography"></a>Bibliography</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;thebibliography&#125;&#123;99&#125;   <span class="comment"># 99 means the maximum number of references</span></span><br><span class="line">\bibitem </span><br><span class="line">\end&#123;thebibliography&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Display-below"><a href="#Display-below" class="headerlink" title="Display below"></a>Display below</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\displaystyle \max_&#123;x&#125;  <span class="comment"># or \underset&#123;x&#125;&#123;\max&#125;</span></span><br></pre></td></tr></table></figure>
-<p>as for the symbol “argmin”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\operatorname*&#123;argmin&#125;\limits_&#123;x \le 0&#125;  <span class="comment"># or change \limits to \displaystyle</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="change-the-line"><a href="#change-the-line" class="headerlink" title="change the line"></a>change the line</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">\begin&#123;split&#125;</span><br><span class="line">x=1\\</span><br><span class="line">+2</span><br><span class="line">\end&#123;split&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="add-a-lateral-bracket"><a href="#add-a-lateral-bracket" class="headerlink" title="add a lateral bracket"></a>add a lateral bracket</h3><p>example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\varphi(e_&#123;i&#125;)=(f_&#123;1&#125;(e_&#123;i&#125;),\cdot\cdot\cdot, f_&#123;n&#125;(e_&#123;i&#125;))=( \overbrace&#123; 0,\cdot\cdot\cdot,0 &#125;^&#123;i-1\text&#123;个&#125;&#125;,1,0,\cdot\cdot\cdot,0), i=1,2,\cdot\cdot\cdot,n.</span><br></pre></td></tr></table></figure></p>
-<h3 id="change-length-and-width-of-a-tabular"><a href="#change-length-and-width-of-a-tabular" class="headerlink" title="change length and width of a tabular"></a>change length and width of a tabular</h3><p>example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;|p&#123;2cm&#125;|p&#123;0.5cm&#125;|p&#123;1.5cm&#125;|&#125; </span><br><span class="line">	\hline</span><br><span class="line">	A&amp;B&amp;C\\ [0.5cm]</span><br><span class="line">	\hline</span><br><span class="line">	\multicolumn&#123;2&#125;&#123;|c|&#125;&#123;D&#125;&amp;E\\ [1cm]</span><br><span class="line">	\hline</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure><br>And a link <a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_82e1c12c0102wj0c.html">Ref</a></p>
-<p>recommend a link of comprehensive collection of special symbols: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42682806/article/details/92668730">latex symbols</a></p>
 
       
     </div>
